@@ -1,0 +1,21 @@
+Pattern-ul Singleton
+Definiție:
+Singleton este un șablon de proiectare (design pattern) care are ca scop limitarea instanțierii unei clase la o singură instanță și furnizarea unui punct global de acces la acea instanță. Cu alte cuvinte, Singleton asigură că o clasă are o singură instanță și oferă o cale pentru a accesa această instanță de oriunde din cod.
+Când/Unde/De ce se folosește:
+Singleton se utilizează în situații în care avem nevoie de o singură instanță a unei clase pentru a controla resurse sau pentru a furniza un punct central de control pentru diverse operațiuni. Acesta este util în scenariile în care trebuie să evităm crearea mai multor obiecte ale unei clase, precum:
+1. Conexiuni la baze de date: Singleton poate fi folosit pentru a crea o singură conexiune la baza de date, astfel evitând resursele inutile și posibilele conflicte.
+2. Obiecte de configurare: Singleton este folosit pentru a păstra configurații globale, astfel încât acestea să poată fi accesate ușor în întregul cod.
+3. Manageri de resurse: Singleton poate fi utilizat pentru a gestiona resurse precum cache-uri, pool-uri de obiecte sau obiecte de tip Factory.
+Pro:
+- Singleton asigură că o clasă are o singură instanță, ceea ce poate fi esențial în multe situații.
+- Oferă un punct global de acces la instanța, facilitând comunicarea și coordonarea între diferite părți ale codului.
+- Ajută la evitarea supraîncărcării cu instanțe și la economisirea de resurse.
+Contra:
+- Poate duce la o dependență globală și ascunsă între diferite părți ale codului, ceea ce poate face dificilă testarea și refactorizarea.
+- Există posibilitatea de a crea Singleton-uri în mod incorect, ceea ce poate duce la probleme de performanță sau la probleme de concurență.
+- Folosirea Singleton-ului poate fi prea restrictivă și poate duce la un cod rigid și greu de gestionat.
+Cazuri Speciale:
+- Singleton leneș (Lazy Singleton): Acesta este un Singleton care este creat doar atunci când este solicitat pentru prima dată. Această abordare poate economisi resurse, deoarece instanța Singleton nu este creată la început, ci doar când este necesară.
+- Singleton cu sincronizare (Thread-safe Singleton): Acest tip de Singleton asigură că instanța este creată doar o singură dată, chiar și în medii cu mai multe fire de execuție, folosind sincronizarea pentru a evita conflictele.
+- Singleton cu dublă verificare (Double-Checked Singleton): Această variantă a Singleton cu sincronizare încearcă să reducă costurile de sincronizare, verificând dacă instanța a fost deja creată înainte de a intra în secțiunea critică de cod.
+
